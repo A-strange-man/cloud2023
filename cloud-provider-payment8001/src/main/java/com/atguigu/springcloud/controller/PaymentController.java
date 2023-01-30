@@ -35,7 +35,7 @@ public class PaymentController {
     @GetMapping("/getById/{id}")
     public JsonData getById(@PathVariable Long id) {
         PaymentDO paymentDO = paymentService.getById(id);
-        if (paymentDO.getId() != null && paymentDO.getId() > 0) {
+        if (paymentDO != null) {
             return JsonData.buildSuccess(paymentDO);
         }
         return JsonData.buildError("暂无该记录");

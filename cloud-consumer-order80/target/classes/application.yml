@@ -27,3 +27,11 @@ logging:
   level:
     root: INFO
 
+
+#eureka服务注册配置
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
