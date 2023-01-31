@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="938ceec8-c215-4dbd-9636-44825315d506" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7001/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,10 +169,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.OrderMain80" />
+        <item itemvalue="Spring Boot.PaymentMain8001" />
         <item itemvalue="Spring Boot.EurekaMain7002" />
         <item itemvalue="Spring Boot.EurekaMain7001" />
-        <item itemvalue="Spring Boot.PaymentMain8001" />
-        <item itemvalue="Spring Boot.OrderMain80" />
         <item itemvalue="Application.MyBatisPlusGenerator" />
       </list>
     </recent_temporary>
@@ -190,7 +189,7 @@
       <workItem from="1672828014817" duration="4458000" />
       <workItem from="1674991555727" duration="5789000" />
       <workItem from="1675051653541" duration="8701000" />
-      <workItem from="1675135719772" duration="2567000" />
+      <workItem from="1675135719772" duration="2910000" />
     </task>
     <servers />
   </component>
