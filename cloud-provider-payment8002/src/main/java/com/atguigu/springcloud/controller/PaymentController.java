@@ -4,8 +4,6 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.common.JsonData;
 import com.atguigu.springcloud.entities.PaymentDO;
 import com.atguigu.springcloud.service.PaymentService;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 

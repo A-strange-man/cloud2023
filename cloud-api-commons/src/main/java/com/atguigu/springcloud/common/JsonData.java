@@ -34,6 +34,10 @@ public class JsonData {
         return new JsonData(0, null, null);
     }
 
+    public static JsonData buildSuccess(String msg) {
+        return new JsonData(0, null, msg);
+    }
+
     /**
      *  成功，传入数据
      * @param data
@@ -41,6 +45,10 @@ public class JsonData {
      */
     public static JsonData buildSuccess(Object data) {
         return new JsonData(0, data, null);
+    }
+
+    public static JsonData buildSuccess(Object data, String msg) {
+        return new JsonData(0, data, msg);
     }
 
     /**
