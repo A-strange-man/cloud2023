@@ -16,6 +16,7 @@
       <module>cloud-eureka-server7001</module>
       <module>cloud-eureka-server7002</module>
     <module>cloud-provider-payment8002</module>
+    <module>cloud-provider-payment8004</module>
   </modules>
 
   <properties>
@@ -141,6 +142,13 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        <version>2.2.5.RELEASE</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zookeeper-discovery -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
         <version>2.2.5.RELEASE</version>
       </dependency>
 
