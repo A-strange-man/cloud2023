@@ -1,0 +1,37 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: cloud-paymentConsul-service
+
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.32.132:3306/db01?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  #consul配置
+  cloud:
+    consul:
+      host: 192.168.32.132
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        #打开心跳检测
+        heartbeat:
+          enabled: true
+
+#配置plus打印sql日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+
+#设置日志级别,ERROR/WARN/INFO/DEBUG,默认是INFO以上才显示
+logging:
+  level:
+    root: INFO
+
