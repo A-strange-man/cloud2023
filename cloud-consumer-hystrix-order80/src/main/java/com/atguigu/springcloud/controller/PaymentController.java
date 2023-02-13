@@ -2,6 +2,8 @@ package com.atguigu.springcloud.controller;
 
 import com.atguigu.springcloud.common.JsonData;
 import com.atguigu.springcloud.remote.PaymentServiceRemote;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,8 +26,15 @@ public class PaymentController {
     }
 
     @GetMapping("/order/hystrix/timeout/{id}")
+    @HystrixCommand(fallbackMethod = "paymentInfoTimeOutHandler", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
+    })
     public JsonData paymentTimeout(@PathVariable("id") Integer id) {
         return paymentServiceRemote.paymentTimeout(id);
+    }
+
+    public JsonData paymentInfoTimeOutHandler(@PathVariable("id") Integer id) {
+        return JsonData.buildError("系统繁忙0_0");
     }
 
 }

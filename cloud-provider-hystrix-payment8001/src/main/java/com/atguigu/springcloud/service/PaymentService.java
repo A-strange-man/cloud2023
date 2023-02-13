@@ -21,10 +21,10 @@ public class PaymentService {
 
     // 3s以内走正常业务逻辑，超过三秒则调paymentInfoTimeOutHandler方法
     @HystrixCommand(fallbackMethod = "paymentInfoTimeOutHandler", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "7000")
     })
     public String paymentInfoTimeOut(Integer id) {
-        int timeNumber = 2;
+        int timeNumber = 10;
         try {
             TimeUnit.SECONDS.sleep(timeNumber);
         } catch (InterruptedException e) {
