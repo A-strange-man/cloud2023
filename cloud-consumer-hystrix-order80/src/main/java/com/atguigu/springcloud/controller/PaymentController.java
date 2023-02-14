@@ -2,6 +2,7 @@ package com.atguigu.springcloud.controller;
 
 import com.atguigu.springcloud.common.JsonData;
 import com.atguigu.springcloud.remote.PaymentServiceRemote;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
  * @date 2023/02/11 23:13
  */
 @RestController
+@DefaultProperties(defaultFallback = "globalHandler")
 public class PaymentController {
 
     @Resource
@@ -26,15 +28,20 @@ public class PaymentController {
     }
 
     @GetMapping("/order/hystrix/timeout/{id}")
-    @HystrixCommand(fallbackMethod = "paymentInfoTimeOutHandler", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
-    })
+//    @HystrixCommand(fallbackMethod = "paymentInfoTimeOutHandler", commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
+//    })
+    @HystrixCommand
     public JsonData paymentTimeout(@PathVariable("id") Integer id) {
         return paymentServiceRemote.paymentTimeout(id);
     }
 
     public JsonData paymentInfoTimeOutHandler(@PathVariable("id") Integer id) {
         return JsonData.buildError("系统繁忙0_0");
+    }
+
+    public JsonData globalHandler() {
+        return JsonData.buildError("系统繁忙0_0----global");
     }
 
 }
