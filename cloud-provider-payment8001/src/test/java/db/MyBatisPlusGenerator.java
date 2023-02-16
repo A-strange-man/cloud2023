@@ -51,9 +51,9 @@ public class MyBatisPlusGenerator {
         dsConfig.setDbType(DbType.MYSQL)
                 .setDriverName("com.mysql.cj.jdbc.Driver")
                 //TODO  TODO  TODO  TODO
-                .setUrl("jdbc:mysql://192.168.121.128:3306/db01?serverTimezone=UTC&useSSL=false")
+                .setUrl("jdbc:mysql://127.0.0.1:3306/db01?serverTimezone=UTC&useSSL=false")
                 .setUsername("root")
-                .setPassword("123456");
+                .setPassword("yijia");
 
         //3. 策略配置globalConfiguration中
         StrategyConfig stConfig = new StrategyConfig();

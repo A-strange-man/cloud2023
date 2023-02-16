@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938ceec8-c215-4dbd-9636-44825315d506" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/src/main/java/com/atguigu/springcloud/OrderHystrixMain80.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/src/main/java/com/atguigu/springcloud/OrderHystrixMain80.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/src/main/java/com/atguigu/springcloud/remote/PaymentServiceRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/src/main/java/com/atguigu/springcloud/remote/PaymentServiceRemote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/target/classes/com/atguigu/springcloud/OrderHystrixMain80.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/target/classes/com/atguigu/springcloud/OrderHystrixMain80.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/target/classes/com/atguigu/springcloud/remote/PaymentServiceRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-hystrix-order80/target/classes/com/atguigu/springcloud/remote/PaymentServiceRemote.class" afterDir="false" />
-    </list>
+    <list default="true" id="938ceec8-c215-4dbd-9636-44825315d506" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,13 +104,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.OrderHystrixMain80">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -262,7 +259,7 @@
       <workItem from="1675933203662" duration="9284000" />
       <workItem from="1676115803822" duration="5254000" />
       <workItem from="1676289842926" duration="8842000" />
-      <workItem from="1676368427353" duration="7808000" />
+      <workItem from="1676368427353" duration="8431000" />
     </task>
     <servers />
   </component>
