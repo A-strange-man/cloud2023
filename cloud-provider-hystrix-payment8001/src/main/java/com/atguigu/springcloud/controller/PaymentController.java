@@ -32,4 +32,12 @@ public class PaymentController {
         String str = paymentService.paymentInfoTimeOut(id);
         return JsonData.buildSuccess(str);
     }
+
+
+    // =====服务熔断
+    @GetMapping("/payment/ciruit/{id}")
+    public JsonData paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        String res = paymentService.paymentCircuitBreaker(id);
+        return JsonData.buildSuccess(res);
+    }
 }
